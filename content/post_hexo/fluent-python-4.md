@@ -1,12 +1,16 @@
-+++
-topics = ["Python"]
-description = "流畅的Python笔记  第四章"
-draft = false
-date = "2017-11-27T00:03:27+08:00"
-title = "Fluent Python 第四章小结"
-tags = ["Python","基础","bytes","Unicode","文本处理"]
-+++
-
+title: fluent python 第四章小记
+date: 2017-11-27 00:03:27
+tags:
+- Python
+- bytes
+- unicode
+- fluent python
+categories:
+- 读书笔记
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true"
+toc: true
+comment: true
+---
 ## Fluent Python ##
 ### Chapter 4. Texts versus Bytes ###
 ### 第四章.  文本和字节 ###

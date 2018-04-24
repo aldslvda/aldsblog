@@ -1,9 +1,13 @@
-+++
-title = "2017，新的开始"
-draft = false
-date = "2017-01-02T12:11:27+08:00"
-
-+++
+title: 2017，新的开始
+date: 2017-01-02 12:11:27
+tags:
+- flag
+categories:
+- 生活记录
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/nichijou_logo1.jpeg?raw=true"
+toc: true
+comment: true
+---
 
 ## 2017，新的开始
 #### 试试用Pelican开个github page

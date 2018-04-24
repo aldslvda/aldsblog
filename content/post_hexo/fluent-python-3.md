@@ -1,12 +1,16 @@
-+++
-topics = ["Python"]
-description = "流畅的Python笔记  第三章"
-draft = false
-date = "2017-11-23T21:25:19+08:00"
-title = "Fluent Python 第三章小结"
-tags = ["Python","基础","dict","set"]
-+++
-
+title: fluent python 第三章小记
+date: 2017-11-23 21:25:19
+tags:
+- Python
+- dict
+- set
+- fluent python
+categories:
+- 读书笔记
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true"
+toc: true
+comment: true
+---
 ## Fluent Python ##
 ### Chapter 3. Dictionaries and Sets ###
 ### 字典和集合 ###

@@ -1,14 +1,15 @@
-+++
-tags = ["Python","特殊方法"]
-topics = ["Python"
-]
-description = ""
-date = "2017-07-14T18:32:42+08:00"
-title = "fluent python 第一章小记"
-draft = false
-
-+++
-
+title: fluent python 第一章小记
+date: 2017-07-14 18:32:42
+tags:
+- Python
+- magic method
+- fluent python
+categories:
+- 读书笔记
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true"
+toc: true
+comment: true
+---
 ## Fluent Python ##
 ### Chapter 1. The Python Data Model ###
 ### Python数据模型 ###

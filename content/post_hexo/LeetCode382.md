@@ -1,12 +1,14 @@
-+++
-title = "LeetCode382蓄水池抽样算法"
-draft = false
-tags = ["Python", "LeetCode", "蓄水池抽样算法"]
-topics = ["LeetCode"]
-description = ""
-date = "2017-02-16T12:06:23+08:00"
-
-+++
+title: LeetCode382 蓄水池抽样算法
+date: 2017-02-16 12:06:23
+tags:
+- Python
+- 蓄水池抽样
+categories:
+- Leetcode	
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/leetcode_logo.png?raw=true"
+toc: true
+comment: true
+---
 ## LeetCode382 蓄水池抽样算法
 首先说一下**蓄水池抽样算法**：
 

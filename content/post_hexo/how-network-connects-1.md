@@ -1,13 +1,15 @@
-+++
-tags = ["网络","HTTP","socket"]
-topics = ["网络"]
-description = ""
-date = "2017-11-29T01:02:23+08:00"
-title = "网络是怎样连接的 第一章小记"
-draft = false
-
-+++
-
+title: 网络是怎样连接的 第一章小记
+date: 2017-11-29 01:02:23
+tags:
+- http
+- socket
+- 网络是怎样连接的
+categories:
+- 读书笔记
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/hnc_logo.png?raw=true"
+toc: true
+comment: true
+---
 
 ## 网络是怎样连接的 ##
 ### 一. 浏览器生成请求 -- 探索浏览器内部 ###

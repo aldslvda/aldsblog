@@ -1,13 +1,15 @@
-+++
-draft = false
-tags = ["vps", "梯子"]
-topics = ["Ubuntu"]
-description = "VPS升级内核，开启TCP BBR 实现高效单边加速"
-date = "2017-04-14T09:47:02+08:00"
-title = "Ubuntu开启TCP BBR, 实现高效单边加速"
-
-+++
-
+title: VPS升级内核，开启TCP BBR 实现高效单边加速
+date: 2017-04-14 09:47:02+08:00
+tags:
+- ubuntu
+- vps
+- tcp-bbr
+categories:
+- 技术分享
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/google_tcp_bbr.png?raw=true"
+toc: true
+comment: true
+---
 ## 1. 从锐速到BBR
 自从锐速发布以来，这款牛逼的单边加速神器的确为一些线路不太优秀的服务器带来了更优秀的体验。  
 但是由于过高的价格和不再低端售卖。导致了我们除了使用这个软件的破解版之外，并没办法得到一个免费好用的单边加速功能。  

@@ -1,12 +1,16 @@
-+++
-topics = ["Python"]
-description = "Python中的装饰器和函数闭包"
-draft = false
-date = "2017-12-26T00:51:47+08:00"
-title = "Fluent Python 第七章小结"
-tags = ["Python","装饰器","闭包","变量作用域"]
-+++
-
+title: Fluent Python 第七章小结
+date: 2017-12-19 17:01:13
+tags:
+- Python
+- decorator
+- closure
+- fluent python
+categories:
+- 读书笔记
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true"
+toc: true
+comment: true
+---
 ## Fluent Python ##
 ### Chapter 7. Function Decorators and Closures
 ### 第七章: 函数装饰器和函数闭包

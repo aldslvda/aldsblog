@@ -1,12 +1,15 @@
-+++
-topics = ["Python","LeetCode"]
-description = ""
-draft = false
-date = "2017-03-09T15:24:09+08:00"
-title = "LeetCode312 分治法和动态规划"
-tags = ["Divide and Conquer","Dynamic Programming"]
-+++
-
+title: LeetCode312 分治法和动态规划
+date: 2017-03-09 15:24:09
+tags:
+- Python
+- Divide and Conquer
+- Dynamic Programming
+categories:
+- Leetcode	
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/leetcode_logo.png?raw=true"
+toc: true
+comment: true
+---
 
 最近开始渐渐忙了起来，加上按Acceptance做题，后面题目也开始有点复杂了，所以只能勉强维持一天做一道题。今天下午差不多把这周任务完成了，所以稍微划下水，写一下这两天碰到的一个比较复杂的题目（对我来说=。=
 

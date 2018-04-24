@@ -1,16 +1,15 @@
-+++
-tags = ["Python","基础", "函数式编程"]
-topics = ["Python", "Fluent Python"
-]
-description = "Fluent Python 第五章小记"
-date = "2017-12-13T21:21:21+08:00"
-title = "Fluent Python 第五章小记"
-draft = false
-
-+++
-
-
-
+title: fluent python 第五章小记
+date: 2017-12-13 21:21:21
+tags:
+- Python
+- functional
+- fluent python
+categories:
+- 读书笔记
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true"
+toc: true
+comment: true
+---
 
 ## Fluent Python ##
 ### Chapter 5. First Class Functions ###

@@ -1,13 +1,14 @@
-+++
-topics = ["LeetCode"]
-description = ""
-draft = false
-date = "2017-02-10T12:56:16+08:00"
-title = "LeetCode496使用栈(stack)简化时间复杂度"
-tags = ["Python","LeetCode"]
-
-+++
-
+title: LeetCode496 使用栈(stack)简化时间复杂度
+date: 2017-02-10 12:56:16
+tags:
+- Python
+- stack
+categories:
+- Leetcode	
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/leetcode_logo.png?raw=true"
+toc: true
+comment: true
+---
 ## LeetCode 496. Next Greater Element I使用栈(stack)简化时间复杂度
 
 这道题的描述如下：

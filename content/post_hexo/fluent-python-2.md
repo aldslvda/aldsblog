@@ -1,14 +1,15 @@
-+++
-tags = ["Python","序列"]
-topics = ["Python"
-]
-description = ""
-date = "2017-11-11T15:17:43+08:00"
-title = "fluent python 第二章小记"
-draft = false
-
-+++
-
+title: fluent python 第二章小记
+date: 2017-11-11 11:17:43
+tags:
+- Python
+- sequence
+- fluent python
+categories:
+- 读书笔记
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true"
+toc: true
+comment: true
+---
 
 ## Fluent Python ##
 ### Chapter 2. An Array of Sequences ###

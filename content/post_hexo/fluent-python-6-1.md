@@ -1,13 +1,17 @@
-+++
-tags = ["Python","函数式编程", "设计模式","策略模式"]
-topics = ["Python", "Fluent Python"
-]
-description = "使用一等函数实现设计模式(1) —— 策略模式"
-date = "2017-12-17T21:27:33+08:00"
-title = "Fluent Python第六章:使用一等函数实现设计模式(1) —— 策略模式"
-draft = false
+title: Fluent Python第六章:使用一等函数实现设计模式(1) —— 策略模式
+date: 2017-12-17 21:27:33
+tags:
+- Python
+- design pattern
+- The Strategy pattern
+- fluent python
+categories:
+- 读书笔记
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true"
+toc: true
+comment: true
+---
 
-+++
 
 ## Fluent Python ##
 ### Chapter 6. Design Patterns with First-Class Functions ###

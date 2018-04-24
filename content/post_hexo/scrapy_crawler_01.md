@@ -1,14 +1,15 @@
-+++
-tags = ["Python","爬虫", "scrapy"]
-topics = ["Python"
-]
-description = "使用scrapy搭建一个简单的新闻爬虫"
-date = "2017-11-24T01:01:43+08:00"
-title = "使用scrapy搭建一个简单的新闻爬虫"
-draft = false
-
-+++
-
+title: 使用scrapy搭建一个简单的新闻爬虫
+date: 2017-11-24 01:01:43
+tags:
+- Python
+- scrapy
+- crawler
+categories:
+- 技术分享
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/scrapylogo.png?raw=true"
+toc: true
+comment: true
+---
 
 
 # 使用scrapy搭建一个简单的新闻爬虫 #
