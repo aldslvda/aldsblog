@@ -6,7 +6,7 @@ tags:
 - jetbrains
 categories:
 - 技术分享
-thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/hnc_logo.png?raw=true"
+
 toc: true
 comment: true
 ---
