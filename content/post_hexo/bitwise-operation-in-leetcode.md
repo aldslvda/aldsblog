@@ -1,12 +1,14 @@
-+++
-title = "利用Python位运算简化时间/空间复杂度"
-topics = ["LeetCode"]
-description = ""
-draft = false
-tags = ["Python","Bitwise Operation"]
-date = "2017-02-24T16:33:08+08:00"
-+++
-
+title: 利用Python位运算简化时间/空间复杂度
+date: 2017-02-24 16:33:08
+tags:
+- Python
+- Bitwise Operation
+categories:
+- Leetcode	
+thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/leetcode_logo.png?raw=true"
+toc: true
+comment: true
+---
 最近两天碰到两个用位运算解决的题目，恰好一个利用位运算简化了时间复杂度，另一个简化了空间复杂度，所以做个记录加深一下印象。
 第一个题目是LeetCode 421. Maximum XOR of Two Numbers in an Array:  
 **注：这题中提到的异或均是按位异或。
