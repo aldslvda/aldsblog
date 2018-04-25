@@ -43,7 +43,7 @@ class MacroCommand:
     def __call__(self):
         for command in self.commands:
             command()
-```   
+```
 
 如果需要支持撤销操作(命令模式的定义中要求支持), 上面的代码可能远远不够，这时也可以使用Python提供的一些替代品:   
 

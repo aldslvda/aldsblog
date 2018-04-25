@@ -48,7 +48,7 @@ comment: true
 	symbols = '$¢£¥€¤'
 	beyond_ascii = [ord(s) for s in symbols if ord(s) > 127]
 	beyond_ascii = list(filter(lambda c: c > 127, map(ord, symbols)))	
-	```   
+	```  
 	- 示例：使用列表推导求笛卡尔积：   
 	
 	```python
@@ -120,7 +120,7 @@ comment: true
   >>> s[0][0] = 2
   >>> s
 [[2, 1, 1], [2, 1, 1], [2, 1, 1]]
-  ```  
+  ``` 
   
   - 增量赋值（+=/\*=）:
     
@@ -136,7 +136,7 @@ comment: true
 TypeError: 'tuple' object does not support item assignment
 >>> t
 (1, 2, [30, 40, 50, 60])
-    ```    
+    ```   
   **7. sort方法和sorted函数**   
   list.sort函数会就地修改列表，返回值为None.   
   sorted函数会新建一个排好序的列表作为返回值  

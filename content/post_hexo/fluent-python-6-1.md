@@ -102,7 +102,7 @@ class LargeOrderPromo(Promotion): # 第三个具体策略
         if len(distinct_items) >= 10:
             return order.total() * .07
     return 0   
-```    
+```
 在这个示例中 Promotion是抽象基类(ABC)，这么做是为了使用@abstractmethod装饰器，从而明确表明所用的模式。
 
 下面是使用不同出小折扣的Order类示例:
@@ -182,7 +182,7 @@ def large_order_promo(order):
     if len(distinct_items) >= 10:
         return order.total() * .07
     return 0    
-```    
+```
 这个实例中没有抽象类，而且各个策略都是**函数**。    
 下面是实际使用的输出:   
 
@@ -206,7 +206,7 @@ def large_order_promo(order):
 <Order total: 10.00 due: 9.30>
 >>> Order(joe, cart, large_order_promo)
 <Order total: 42.00 due: 42.00>    
-```      
+```
 
 可以看到应用对应的详细策略只需要将函数作为参数传入Order类，没必要像6.1一样实例化策略对象，这样会使得资源有所节省。
 

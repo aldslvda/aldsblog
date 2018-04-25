@@ -112,7 +112,7 @@ class NewsCrawlerItem(Item):
     publish_time = Field()
     text = Field()
     images = Field()
-```    
+```
 
 ### 2.2 编写爬虫 ###
 Spider是爬虫的核心部分，用于从一个(或一系列)网站爬取数据。
