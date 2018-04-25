@@ -10,7 +10,7 @@ photos:
 toc: true
 comment: true
 ---
-![title](https://github.com/aldslvda/blog-images/blob/master/leetcode_logo.png?raw=true)
+
 ## LeetCode382 蓄水池抽样算法
 首先说一下**蓄水池抽样算法**：
 

@@ -12,7 +12,7 @@ photos:
 toc: true
 comment: true
 ---
-![title](https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true)
+
 ## Fluent Python ##
 ### Chapter 7. Function Decorators and Closures
 ### 第七章: 函数装饰器和函数闭包

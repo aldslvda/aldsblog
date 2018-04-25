@@ -11,7 +11,7 @@ photos:
 toc: true
 comment: true
 ---
-![title](https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true)
+
 ## Fluent Python ##
 ### Chapter 2. An Array of Sequences ###
 ### 序列构成的数组 ###

@@ -11,7 +11,7 @@ photos:
 toc: true
 comment: true
 ---
-![title](https://github.com/aldslvda/blog-images/blob/master/hnc_logo.png?raw=true)
+
 ## 网络是怎样连接的 ##
 ### 一. 浏览器生成请求 -- 探索浏览器内部 ###
 

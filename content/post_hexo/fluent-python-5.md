@@ -11,7 +11,7 @@ photos:
 toc: true
 comment: true
 ---
-![title](https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true)
+
 ## Fluent Python ##
 ### Chapter 5. First Class Functions ###
 ### 第五章. 一等函数

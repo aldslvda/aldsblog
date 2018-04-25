@@ -10,7 +10,7 @@ photos:
 toc: true
 comment: true
 ---
-![title](https://github.com/aldslvda/blog-images/blob/master/leetcode_logo.png?raw=true)
+
 ## LeetCode 496. Next Greater Element I使用栈(stack)简化时间复杂度
 
 这道题的描述如下：
