@@ -39,7 +39,7 @@ nonlocal 是在Python3 中引入的保留关键字，如果要使用函数闭包
 装饰器是一个可调用的对象，它的参数是另一个函数（被装饰的函数），装饰器可能会将输入的函数进行处理返回结果，或者将其替换成另一个函数或者可调用对象。     
 下面是一个例子, 假设有一个名为decorate的装饰器:
 
-```python
+    ```python
 @decorate
 def target():
     print('running target()') 
@@ -50,7 +50,7 @@ target = decorate(target())
 
 上述两段代码得到的target函数都是经过decrate处理过的, 下面的控制台会话证明了这点:   
 
-```python   
+    ```python   
 >>> def deco(func):
 ...     def inner():
 ...         print('running inner()')
