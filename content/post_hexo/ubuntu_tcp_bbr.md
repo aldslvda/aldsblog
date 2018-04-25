@@ -6,7 +6,8 @@ tags:
 - tcp-bbr
 categories:
 - 技术分享
-thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/google_tcp_bbr.png?raw=true"
+photos:	 
+- "https://github.com/aldslvda/blog-images/blob/master/google_tcp_bbr.png?raw=true"
 toc: true
 comment: true
 ---

@@ -6,7 +6,8 @@ tags:
 - bilibili	
 categories:
 - 技术分享	
-thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/bilibili_banner.png?raw=true"
+photos:	
+- "https://github.com/aldslvda/blog-images/blob/master/bilibili_banner.png?raw=true"
 toc: true
 comment: true
 ---

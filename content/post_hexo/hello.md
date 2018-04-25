@@ -4,7 +4,8 @@ tags:
 - flag
 categories:
 - 生活记录
-thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/nichijou_logo1.jpeg?raw=true"
+photos:	 
+- "https://github.com/aldslvda/blog-images/blob/master/nichijou_logo1.jpeg?raw=true"
 toc: true
 comment: true
 ---

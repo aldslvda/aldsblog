@@ -6,7 +6,8 @@ tags:
 - 网络是怎样连接的
 categories:
 - 读书笔记
-thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/hnc_logo.png?raw=true"
+photos:	 
+- "https://github.com/aldslvda/blog-images/blob/master/hnc_logo.png?raw=true"
 toc: true
 comment: true
 ---

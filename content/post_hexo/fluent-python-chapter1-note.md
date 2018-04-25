@@ -6,7 +6,8 @@ tags:
 - fluent python
 categories:
 - 读书笔记
-thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true"
+photos:	 
+- "https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true"
 toc: true
 comment: true
 ---

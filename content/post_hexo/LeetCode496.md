@@ -5,7 +5,8 @@ tags:
 - stack
 categories:
 - Leetcode	
-thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/leetcode_logo.png?raw=true"
+photos:	 
+- "https://github.com/aldslvda/blog-images/blob/master/leetcode_logo.png?raw=true"
 toc: true
 comment: true
 ---

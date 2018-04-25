@@ -6,7 +6,8 @@ tags:
 - crawler
 categories:
 - 技术分享
-thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/scrapylogo.png?raw=true"
+photos:	 
+- "https://github.com/aldslvda/blog-images/blob/master/scrapylogo.png?raw=true"
 toc: true
 comment: true
 ---
