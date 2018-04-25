@@ -10,7 +10,7 @@ thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/bilibili_banner.
 toc: true
 comment: true
 ---
-![F1.1](https://github.com/aldslvda/blog-images/blob/master/bilibili_banner.png?raw=true)
+![title](https://github.com/aldslvda/blog-images/blob/master/bilibili_banner.png?raw=true)
 
 ## 获取BiliBili视频下载地址
 
