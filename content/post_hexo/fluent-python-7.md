@@ -43,7 +43,6 @@ nonlocal 是在Python3 中引入的保留关键字，如果要使用函数闭包
 @decorate
 def target():
     print('running target()') 
-
 # 等价于下面的写法
 target = decorate(target())
 ``` 
@@ -178,8 +177,8 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 3, in f1
 NameError: name 'b' is not defined
-
 ```      
+
 这个例子中由于没有定义全局变量b导致报错
 
 ```python    
@@ -189,6 +188,7 @@ NameError: name 'b' is not defined
 6
 
 ```    
+
 这里定义了全局变量b,正常运行
 
 ```python    
