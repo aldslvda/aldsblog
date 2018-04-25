@@ -39,13 +39,13 @@ nonlocal 是在Python3 中引入的保留关键字，如果要使用函数闭包
 装饰器是一个可调用的对象，它的参数是另一个函数（被装饰的函数），装饰器可能会将输入的函数进行处理返回结果，或者将其替换成另一个函数或者可调用对象。     
 下面是一个例子, 假设有一个名为decorate的装饰器:
 
-    ```python
+```python
 @decorate
 def target():
     print('running target()') 
 # 等价于下面的写法
 target = decorate(target())
-``` 
+```
 
 
 上述两段代码得到的target函数都是经过decrate处理过的, 下面的控制台会话证明了这点:   
@@ -64,7 +64,7 @@ target = decorate(target())
 running inner()
 >>> target
 <function deco.<locals>.inner at 0x10063b598>
-```     
+```
 
 可以看到target 已经被替换成了inner,严格来说target现在是inner的引用。       
 
@@ -95,7 +95,7 @@ def main():
     f3()
 if __name__=='__main__':
     main()
-```      
+```
 
 控制台输出如下:
 
@@ -107,7 +107,7 @@ registry -> [<function f1 at 0x10320eb70>, <function f2 at 0x10320eae8>]
 running f1()
 running f2()
 running f3()
-```     
+```
 
 如果是导入:    
 ```python    
@@ -116,7 +116,7 @@ running register(<function f1 at 0x1100480d0>)
 running register(<function f2 at 0x110048158>)
 >>> registeration.registry
 [<function f1 at 0x1100480d0>, <function f2 at 0x110048158>]   
-```      
+```
 
 上面的例子可以看出：函数装饰器在导入模块时立即执行，而被装饰的函数只在明确调用时运行。这突出了 Python 的**导入时**和**运行时**之间的区别。    
 
@@ -154,7 +154,7 @@ def large_order(order):
 def best_promo(order):
     """选择可用的最佳折扣"""
     return max(promo(order) for promo in promos)
-```     
+```
 
 这样做的好处有:
 
@@ -177,7 +177,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "<stdin>", line 3, in f1
 NameError: name 'b' is not defined
-```      
+```
 
 这个例子中由于没有定义全局变量b导致报错
 
@@ -187,7 +187,7 @@ NameError: name 'b' is not defined
 3
 6
 
-```    
+```
 
 这里定义了全局变量b,正常运行
 
@@ -205,7 +205,7 @@ Traceback (most recent call last):
   File "<stdin>", line 3, in f2
 UnboundLocalError: local variable 'b' referenced before assignment
 
-```    
+```
 
 这里由于函数f2的定义体中给b赋值了，导致f2判断b是局部变量。
 
@@ -226,7 +226,7 @@ UnboundLocalError: local variable 'b' referenced before assignment
 >>> b
 6
 >>>
-```     
+```
 
 为了深入理解一下f1/f2这两个函数的变量加载方式，可以使用dis模块反汇编，查看字节码：  
 
@@ -260,7 +260,7 @@ SyntaxError: invalid syntax
              18 STORE_FAST               1 (b)
              20 LOAD_CONST               0 (None)
              22 RETURN_VALUE
-```       
+```
 
 
 ####  7.5  闭包   
@@ -279,7 +279,7 @@ class Averager():
         self.series.append(new_value)
         total = sum(self.series)
         return total/len(self.series)
-```   
+```
 
 其中Averager()是一个可调用对象，创建Averager的实例就可以达成上面所说的要求。
 
@@ -301,7 +301,7 @@ def make_averager():
         total = sum(series)
         return total/len(series)
     return averager
-```    
+```
 > \>\>\> avg = make_averager()    
 > \>\>\> avg(10)    
 >  10.0    
@@ -327,7 +327,7 @@ def make_averager():
 ('new_value', 'total')
 >>> avg.__code__.co_freevars
 ('series',)
-```   
+```
 
 series 绑定在 avg.\_\_closure\_\_属性中
 
@@ -346,7 +346,7 @@ series 绑定在 avg.\_\_closure\_\_属性中
 11.333333333333334
 >>> avg.__closure__[0].cell_contents
 [10, 11, 13]
-```     
+```
 
 这样我们可以很形象的理解闭包的性质了，闭包是一种函数，它会保留定义函数时存在的自由变量的绑定，这样调用函数时，虽然定义作用域不可用了，但是仍能使用那些绑定。    
 
@@ -366,7 +366,7 @@ def make_averager_v1():
         total += new_value
         return total / count
     return averager    
-```      
+```
 
 控制台输出如下:   
 ```python      
@@ -379,7 +379,7 @@ Traceback (most recent call last):
     count += 1
 UnboundLocalError: local variable 'count' referenced before assignment
 >>>
-```      
+```
 
 由于函数的定义体对count赋值了，由于count是int,赋值会隐式的创建一个新对象，导致函数判断count是局部变量而不是自由变量，不会保存在闭包中，会导致抛出异常。
 
@@ -396,7 +396,7 @@ def make_averager_v1():
         total += new_value
         return total / count
     return averager
-```   
+```
 在没有nonlocal声明的Python2中，我们可以将变量作为值存储在可变对象中来解决这个问题。
 
 #### 7.7 实现一个简单的装饰器     
@@ -414,7 +414,7 @@ def clock(func):
         print('[%0.8fs] %s(%s) -> %r' % (elapsed, name, arg_str, result))
         return result
     return clocked
-```    
+```
 
 下面的Python代码展示了如何使用这个装饰器:
 
@@ -433,7 +433,7 @@ if __name__=='__main__':
     snooze(.123)
     print('*' * 40, 'Calling factorial(6)')
     print('6! =', factorial(6))
-```    
+```
 
 输出如下:
 
@@ -605,7 +605,7 @@ def _(seq):
     inner = '</li>\n<li>'.join(htmlize(item) for item in seq)
     return '<ul>\n<li>' + inner + '</li>\n</ul>'
 
-```     
+```
 
 注册的专门函数应该尽可能处理抽象基类（如 numbers.Integral 和abc.MutableSequence），不要处理具体实现（如 int 和 list）。这样，代码支持的兼容类型更广泛。例如，Python 扩展可以子类化 numbers.Integral，使用固定的位数实现 int 类型。   
 
@@ -637,7 +637,7 @@ def f2():
     print('running f2()')
 def f3():
     print('running f3()')
-```      
+```
 
 这里的关键是，register() 要返回 decorate，然后把它应用到被装饰的函数上。    
 这只是一个最简单的例子，参数化装饰器通常会把被装饰的函数替换掉，而且结构上需要多一层嵌套。接下来会探讨这种函数金字塔。  
@@ -668,7 +668,7 @@ if __name__ == '__main__':
         time.sleep(seconds)
         for i in range(3):
             snooze(.123)
-```   
+```
 
 #### 7.10 小结
 这章开始已经进入元编程领域了。
