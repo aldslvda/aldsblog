@@ -10,11 +10,13 @@ thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/bilibili_banner.
 toc: true
 comment: true
 ---
+![F1.1](https://github.com/aldslvda/blog-images/blob/master/bilibili_banner.png?raw=true)
+
 ## 获取BiliBili视频下载地址
 
 最近在写Bilibili App的爬虫，由于bilibili是一个视频站，写爬虫很重要的一个环节就是怎样获取到视频的**下载地址**，所以我把如何获取B站视频下载地址做了一个简单的整理。
 
-### 1. 获取需要下载视频的av号
+### 获取需要下载视频的av号
 一个常见的B站视频的链接如下：
 
 ```
@@ -27,7 +29,7 @@ http://www.bilibili.com/video/av1608918/
 param = '1608918'
 ```
 
-### 2. 获取视频信息
+### 获取视频信息
 通过抓取B站app发送的HTTP请求，可以知道获取一个视频信息的URL如下：
 
 ```
@@ -166,7 +168,7 @@ actionKey=appkey&aid=7725070&appkey=27eb53fc9058f8c3&build=4070&device=phone&fro
 
 看得出来这是一个**列表**，其实b站的CDN上面，一个较长的视频是由几个较短的视频拼接而成，还有另外一种情况就是b站视频的**分P**，都会使得同一个视频下面存储多个小的视频，pages就是这些小视频的列表，这些视频需要分别获得**下载地址**,我们关注的参数是每一个子视频的**cid**。
 
-### 3. 获取视频的下载地址
+### 获取视频的下载地址
 下面的链接同样是通过抓取HTTP请求获得：
 
 ```
@@ -276,7 +278,7 @@ ae1954356fbd510073f636d9ca2d36e7
 其中durl下面的url参数就是视频下载地址了。
 
 
-### 4. 写了一个月的第一篇=。=终于写完了
+### 写了一个月的第一篇=。=终于写完了
 其实工作中碰到过很多app需要抓取信息，但是狠下心来写一篇总结的就只有b站23333
 
 终于是写完了=。=

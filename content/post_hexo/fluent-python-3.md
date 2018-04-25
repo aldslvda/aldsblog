@@ -11,6 +11,7 @@ thumbnail:	"https://github.com/aldslvda/blog-images/blob/master/fluent_python_lo
 toc: true
 comment: true
 ---
+![title](https://github.com/aldslvda/blog-images/blob/master/fluent_python_logo.png?raw=true)
 ## Fluent Python ##
 ### Chapter 3. Dictionaries and Sets ###
 ### 字典和集合 ###
