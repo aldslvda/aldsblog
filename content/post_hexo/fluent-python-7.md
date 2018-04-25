@@ -46,8 +46,9 @@ def target():
 
 # 等价于下面的写法
 target = decorate(target())
+``` 
 
-```    
+
 上述两段代码得到的target函数都是经过decrate处理过的, 下面的控制台会话证明了这点:   
 
 ```python   
