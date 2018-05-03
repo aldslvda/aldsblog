@@ -20,7 +20,7 @@ comment: true
 
 这篇博文中讨论命令模式。
 
-#### 6.2 命令模式
+#### 命令模式
 ![命令模式的UML类图](https://github.com/aldslvda/blog-images/blob/master/fluent-python-6.2.png?raw=true)
 
 上面的UML类图所描述的场景是"菜单驱动的文本编辑器",使用命令模式实现。各个命令可以有不同的接收者（实现操作的对象）。对 PasteCommand 来说，接收者是Document。对 OpenCommand 来说，接收者是应用程序。
