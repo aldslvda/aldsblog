@@ -1,4 +1,4 @@
-title: Fluent Python 第九章小结
+title: Fluent Python 第十章小结
 date: 2018-05-07 18:38:00
 tags:
 - Python
