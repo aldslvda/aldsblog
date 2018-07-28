@@ -1,4 +1,4 @@
-title: Fluent Python 第十二章: 继承的优缺点
+title: Fluent Python 第十二章 继承的优缺点
 date: 2018-07-29 03:55:00
 tags:
 - Python

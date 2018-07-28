@@ -1,4 +1,4 @@
-title: Fluent Python 第十一章: 从协议到抽象基类
+title: Fluent Python 第十一章 从协议到抽象基类
 date: 2018-07-28 18:00:00
 tags:
 - Python
