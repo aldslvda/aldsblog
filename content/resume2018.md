@@ -77,9 +77,7 @@
 - 熟悉SQL语句，能熟练使用MySQL,能独立设计数据库表结构;
 - 对NoSQL有所了解，使用过MongoDB，Redis; 
 - 了解Java,会使用Java搭建基本的web框架，编写简单的web接口;
-- 熟练使用Charles，wireshark等软件抓取http协议，熟练使用IntelliJ IDEA 等软件进行开发;
-- 熟悉html/xml/json 等格式的解析和信息提取;
-- 熟悉Linux/Mac OSX环境下的开发。
+- 熟悉Linux/MacOS/Windows环境下的开发。
 
 ## 5. 目前的状态 ##
 --------------------------------------------------
