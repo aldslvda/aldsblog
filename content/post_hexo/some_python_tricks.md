@@ -7,7 +7,7 @@ tags:
 categories:
 - 随手摘录
 photos:	 
-- "https://github.com/aldslvda/blog-images/blob/master/python_tricks_title.jpg?raw=true"
+- "https://github.com/aldslvda/blog-images/blob/master/python-tricks-title.jpg?raw=true"
 toc: true
 comment: true
 ---
