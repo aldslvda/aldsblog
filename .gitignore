@@ -6,3 +6,4 @@ layouts
 static
 node_modules/
 public/
+db.json
