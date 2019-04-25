@@ -78,7 +78,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://205053c9c0e235b1c10f87095c04f96e99f9f37b@github.com/aldslvda/aldslvda.github.io.git  
+  repo: https://gh_token/aldslvda/aldslvda.github.io.git  
   branch: master
 
 search: 
