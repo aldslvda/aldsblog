@@ -6,7 +6,7 @@ tags:
 categories:
 - 随手摘录	
 photos:	 
-- "https://github.com/aldslvda/blog-images/blob/master/python-security?raw=true"
+- "https://github.com/aldslvda/blog-images/blob/master/python-security.jpg?raw=true"
 toc: true
 comment: true
 ---
