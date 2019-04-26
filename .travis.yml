@@ -17,6 +17,9 @@ cache:
 
 before_install:
   - npm install -g hexo-cli
+  - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
+  - git config user.name "aldslvda"
+  - git config user.email "aldslvda@live.com"
 
 # Start: Build Lifecycle
 install:
@@ -28,12 +31,11 @@ script:
   - hexo clean
   - hexo generate
   - echo ${GH_TOKEN}
+  - hexo deploy
 
 # 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
-after_script:
-  - git config user.name "aldslvda"
-  - git config user.email "aldslvda@live.com"
-  # 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
-  - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
-  - hexo deploy
+# after_script:
+
+# 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！ 
+
 # End: Build LifeCycle
