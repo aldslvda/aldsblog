@@ -12,12 +12,9 @@ toc: true
 comment: true
 ---
 
-
-## 获取BiliBili视频下载地址
-
 最近在写Bilibili App的爬虫，由于bilibili是一个视频站，写爬虫很重要的一个环节就是怎样获取到视频的**下载地址**，所以我把如何获取B站视频下载地址做了一个简单的整理。
-
-### 获取需要下载视频的av号
+<!-- more -->
+# 获取需要下载视频的av号
 一个常见的B站视频的链接如下：
 
 ```
@@ -30,7 +27,7 @@ http://www.bilibili.com/video/av1608918/
 param = '1608918'
 ```
 
-### 获取视频信息
+# 获取视频信息
 通过抓取B站app发送的HTTP请求，可以知道获取一个视频信息的URL如下：
 
 ```
@@ -48,13 +45,13 @@ https://app.bilibili.com/x/v2/view?actionKey=appkey&aid=7725070&appkey=27eb53fc9
 
 需要我们其他参数都是现成可以获取到的，而**sign**这个参数是我们需要自己计算得到的，计算方法如下：
 
-#### (1) 将除sign外的其他参数按升序排列，得：
+## (1) 将除sign外的其他参数按升序排列，得：
 
 ```
 actionKey=appkey&aid=7725070&appkey=27eb53fc9058f8c3&build=4070&device=phone&from=1&mobi_app=iphone&platform=ios&ts=1482977603
 ```
 
-#### (2) 将步骤1的结果与secretKey进行拼接
+## (2) 将步骤1的结果与secretKey进行拼接
 
    secretKey的取值（根据appKey来获取）： 
 
@@ -74,7 +71,7 @@ c2ed53a74eeefe3cf99fbd01d8c9c375
 actionKey=appkey&aid=7725070&appkey=27eb53fc9058f8c3&build=4070&device=phone&from=1&mobi_app=iphone&platform=ios&ts=1482977603c2ed53a74eeefe3cf99fbd01d8c9c375
 ```
 
-#### (3) 计算步骤2中得到的字符串的md5，得到
+## (3) 计算步骤2中得到的字符串的md5，得到
 
 ```
 3fa3c3fa6557094b5680066009b41897
@@ -169,7 +166,7 @@ actionKey=appkey&aid=7725070&appkey=27eb53fc9058f8c3&build=4070&device=phone&fro
 
 看得出来这是一个**列表**，其实b站的CDN上面，一个较长的视频是由几个较短的视频拼接而成，还有另外一种情况就是b站视频的**分P**，都会使得同一个视频下面存储多个小的视频，pages就是这些小视频的列表，这些视频需要分别获得**下载地址**,我们关注的参数是每一个子视频的**cid**。
 
-### 获取视频的下载地址
+# 获取视频的下载地址
 下面的链接同样是通过抓取HTTP请求获得：
 
 ```
@@ -219,7 +216,7 @@ appKey的初始字符串为"VsfoFjIDZshujsdt”，累加子为3，返回的out1�
 
 sign的计算方式也会用到上面的check_tv_box()函数，下面是计算sign的步骤：
 
-#### (1) 计算用于拼接的字符串，代码如下：
+## (1) 计算用于拼接的字符串，代码如下：
 	
 ```c
 string sz2 = "zEcQEUTunrHlLvYiGXyefkmJPmDQEtow"; 
@@ -231,19 +228,19 @@ string out2 = check_tv_box(sz2, add);
 	
 注意：这个结果固定，可以直接用这个值
 
-#### (2) 将其他所有参数排序 
+## (2) 将其他所有参数排序 
 
 ```
 appkey=YvirImLGlLANCLvM&build=4070&buvid=3168fe38e580b16a02c2cc9beceaf6b7&cid=12662538&device=phone&otype=json&platform=iphone&quality=2
 ```
 
-#### (3) 在参数最后拼接步骤1的结果： 
+## (3) 在参数最后拼接步骤1的结果： 
 
 ```
 appkey=YvirImLGlLANCLvM&build=4070&buvid=3168fe38e580b16a02c2cc9beceaf6b7&cid=12662538&device=phone&otype=json&platform=iphone&quality=2JNlZNgfNGKZEpaDTkCdPQVXntXhuiJEM
 ```
 
-#### (4) 计算步骤3结果的md5，得： 
+## (4) 计算步骤3结果的md5，得： 
 
 ```
 ae1954356fbd510073f636d9ca2d36e7
@@ -279,7 +276,7 @@ ae1954356fbd510073f636d9ca2d36e7
 其中durl下面的url参数就是视频下载地址了。
 
 
-### 写了一个月的第一篇=。=终于写完了
+# 写了一个月的第一篇=。=终于写完了
 其实工作中碰到过很多app需要抓取信息，但是狠下心来写一篇总结的就只有b站23333
 
 终于是写完了=。=

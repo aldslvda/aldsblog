@@ -13,11 +13,10 @@ comment: true
 ---
 
 
-## Python 一些小技巧
+> 本文分享一些使用 Python 的技巧，顺序按照 A-Z 排列。
 
-本文分享一些使用 Python 的技巧，顺序按照 A-Z 排列。
-
-### all or any
+<!-- more -->
+# all or any
 
 Python 非常受欢迎的原因之一是其可读性和表达性。
 
@@ -39,7 +38,7 @@ if any(x) and not all(x):
     print("At least one True and one False")
 ```
 
-### bashplotlib
+# bashplotlib
 
 想在控制台中绘图吗？
 
@@ -49,7 +48,7 @@ $ pip install bashplotlib
 
 使用上面的行，即可在控制台中绘图。
 
-### collections
+# collections
 
 Python 有一些很棒的默认数据类型，但有时候它们可能不会尽如你意。
 
@@ -69,7 +68,7 @@ x = OrderedDict(a=1, b=2, c=3)
 y = Counter("Hello World!")
 ```
 
-### dir
+# dir
 
 你是否想过如何查看 Python 对象内部及其具有哪些属性？
 
@@ -88,7 +87,7 @@ y = Counter("Hello World!")
 > https://docs.python.org/3/library/functions.html#dir
 
 
-### emoji
+# emoji
 
 是的，真的有。请点击这里
 > https://pypi.org/project/emoji/
@@ -106,7 +105,7 @@ print(emojize(":thumbs_up:"))
 👍
 ```
 
-### from \_\_future\_\_ import
+# from \_\_future\_\_ import
 
 Python 流行的一个结果是，总有新版本正在开发中。新版本意味着新功能——除非你的版本已经过时。
 
@@ -120,7 +119,7 @@ from \_\_future\_\_ import print_function
 print("Hello World!")
 ```
 
-### geopy
+# geopy
 
 地理（Geography）对于程序员来说可能是一个具有挑战性的领域。但是 geopy 模块让它变得异常简单。
 
@@ -145,7 +144,7 @@ print(location.address)
 print(location.location)
 ```
 
-### howdoi
+# howdoi
 
 陷入编码问题，却不记得以前见过的解决方案？需要检查 StackOverflow，但不想离开终端？
 
@@ -166,7 +165,7 @@ $ howdoi undo commits in git
 ```bash
 $ howdoi exit vim
 ```
-### inspect
+# inspect
 
 Python 的 inspect 模块非常有助于理解问题背后的详情。你甚至可以在 inspect 模块上调用其方法！
 
@@ -187,7 +186,7 @@ print(inspect.currentframe().f_lineno)
 
 当然，除了这些琐碎的用途之外，inspect 模块还能帮助你理解代码正在做的事。你还可以用它编写自文档化代码。
 
-### Jedi
+# Jedi
 
 Jedi 库是一个自动完成和代码分析的库。它使代码编写变得更快、效果更高。
 
@@ -197,7 +196,7 @@ Jedi 库是一个自动完成和代码分析的库。它使代码编写变得更
 
 你可能已经在使用 Jedi 了。IPython 项目就使用 Jedi 实现代码自动完成功能。
 
-### \*\*kwargs
+# \*\*kwargs
 
 学习任何语言时都会遇到很多里程碑。对于 Python 来说，理解神秘的\*\*kwargs 语法可能算是其中之一。
 
@@ -223,7 +222,7 @@ someFunction(a=1, b=2)
 
 当你想编写能够处理事先未定义的命名参数的函数时，这个很有用。
 
-### 列表推导式（List comprehensions）
+# 列表推导式（List comprehensions）
 
 我最喜欢 Python 编程的原因之一是它的列表推导式
 > https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
@@ -249,7 +248,7 @@ for city in cities:
 
     visit(city)
 ```
-### map
+# map
 
 Python 通过许多内置功能支持函数式编程。map() 函数是最有用的函数之一——特别是当它与 lambda 函数结合使用时。
 
@@ -267,7 +266,7 @@ print(list(y))
 
 在上面的例子中，map() 将一个简单的 lambda 函数应用于 x 中的每个元素。它返回一个 map 对象，该对象可以被转换成可迭代的对象，如列表或元组。
 
-### newspaper3k
+# newspaper3k
 
 如果你之前没有见过它，那么我建议你先查看
 > https://pypi.org/project/newspaper3k/。
@@ -280,7 +279,7 @@ print(list(y))
 
 如果你想在下一个项目中使用 BeautifulSoup 或其它 DIY 网页抓取库，那么不如使用$ pip install newspaper3k，既省时又省事，何乐而不为呢？
 
-### 运算符重载（Operator overloading）
+# 运算符重载（Operator overloading）
 
 Python 支持运算符重载。
 
@@ -319,7 +318,7 @@ something < nothing
 something + nothing
 ```
 
-### pprint
+# pprint
 
 Python 的默认 print 函数就可以实现打印功能。但如果尝试打印较大的嵌套对象，就会发现打印结果很丑。
 
@@ -342,7 +341,7 @@ pprint.pprint(users)
 Queue
 ```
 
-### Python 支持多线程，而这是由 Python 标准库的 Queue 模块支持的。
+# Python 支持多线程，而这是由 Python 标准库的 Queue 模块支持的。
 
 该模块允许用户实现队列（queue）数据结构。队列数据结构允许用户根据特定的规则添加和检索条目。
 
@@ -352,7 +351,7 @@ Queue
 
 如何使用 queue 在 Python 中实现多线程编程，示例详见：https://www.tutorialspoint.com/python3/python_multithreading.htm。
 
-### \_\_repr\_\_
+# \_\_repr\_\_
 
 在 Python 中定义一个类别或对象时，以「官方」方式将对象表示为字符串很有用。例如：
 ```bash
@@ -378,7 +377,7 @@ someInstance = someClass()
 print(someInstance)
 ```
 
-### sh
+# sh
 
 Python 是一种伟大的脚本语言，不过有时使用标准 os 和 subprocess 库会有点棘手。
 
@@ -401,7 +400,7 @@ sh.whoami()
 sh.echo('This is great!')
 ```
 
-### 类型提示（Type hints）
+# 类型提示（Type hints）
 
 Python 是动态语言。在定义变量、函数、类别等时无需指定数据类型。
 
@@ -447,7 +446,7 @@ z = addMatrix(x, y)
 
 它们还允许你在运行之前使用类型检查工具捕捉 TypeError。在进行大型复杂项目时执行此类操作是值得的。
 
-### uuid
+# uuid
 
 生成通用唯一标识符（Universally Unique ID，UUID）的一种快速简单方法就是使用 Python 标准库的 uuid 模块。
 
@@ -467,7 +466,7 @@ print(user_id)
 
 在给定集合中找出重复数字的可能性极低。即使有一万亿 UUID，重复数字存在的概率也远远低于十亿分之一。
 
-### 虚拟环境（Virtual environment）
+# 虚拟环境（Virtual environment）
 
 这可能是 Python 中我最喜欢的事物了。
 
@@ -483,7 +482,7 @@ pip install all-the-modules
 ```
 现在你在一台机器上具备独立的多个 Python 版本了。问题解决！
 
-### wikipedia
+# wikipedia
 
 Wikipedia 拥有一个很棒的 API，允许用户以编程方式访问巨大体量的免费知识和信息。
 
@@ -504,7 +503,7 @@ for link in result.links:
 ```
 和真实的维基百科网站类似，该模块支持多种语言、页面消歧、随机页面检索，甚至还具备 donate() 方法。
 
-### xkcd
+# xkcd
 
 humour 是 Python 语言的一个关键特征，其名称来自英国喜剧片《蒙提·派森的飞行马戏团》(Monty Python and the Flying Circus)。Python 的很多官方文档引用了该喜剧片最著名的剧情。
 
@@ -514,7 +513,7 @@ import antigravity
 ```
 将打开 xkcd 画的 Python 漫画。不要改变这一点，Python。不要改变。
 
-### YAML
+# YAML
 
 YAML 代表 『YAML Ain』t Markup Language』。它是一种数据格式语言，是 JSON 的超集。
 
@@ -532,7 +531,7 @@ import yaml
 ```
 PyYAML 使你能够存储任何数据类型的 Python 对象，以及任何用户定义类别的实例。
 
-### zip
+# zip
 
 给你支最后一招，非常酷。还在用两个列表来组成一部词典吗？
 ```python

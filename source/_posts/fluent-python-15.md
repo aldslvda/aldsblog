@@ -13,9 +13,12 @@ toc: true
 comment: true
 ---
 
-## Fluent Python 
-### Chapter 15. Context Managers and else Blocks
-### 第十五章: 上下文管理器和 else 块
+> Fluent Python 第十五章读书笔记
+
+<!-- more --> 
+
+# Chapter 15. Context Managers and else Blocks
+# 第十五章: 上下文管理器和 else 块
 
 本章主要会讨论python中的流程控制特性
 - with语句和上下文管理器
@@ -26,17 +29,17 @@ with 语句会设置一个临时的上下文，交给上下文管理器对象控
 关闭文件之外，with 块还有很多用途。
 else 子句与 with 语句完全没有关系。但是也涉及到流程控制。
 
-#### 15.1 if语句之外的else块
+## 15.1 if语句之外的else块
 else 子句不仅能在 if 语句中使用，还能在 for、while 和 try 语句中使用。
 
 for/else、while/else 和 try/else 的语义关系紧密，不过与 if/else 差别很大。
 else 子句的行为如下：
-##### for
+### for
 仅当 for 循环运行完毕时（即 for 循环没有被 break 语句中止）才运行 else 块。
 
-##### while
+### while
 仅当 while 循环因为条件为False而退出时（即 while 循环没有被 break 语句中止）才运行 else 块。
-##### try
+### try
 仅当 try 块中没有异常抛出时才运行 else 块。[官方文档](https://docs.python.org/3/reference/compound_stmts.html)还指出：“else 子句抛出的异常不会由前面的 except 子句处理。”在所有情况下，如果异常或者 return、break 或 continue 语句导致控制权跳到了复合语句的主块之外，else 子句也会被跳过。
 
 在 Python 中，try/except 不仅用于处理错误，还常用于控制流程。为此，Python [官方词汇表](https://docs.python.org/3/glossary.html#term-eafp)还定义了两个缩略词（口号）。
@@ -45,7 +48,7 @@ else 子句的行为如下：
 - LBYL
 　　三思而后行（look before you leap）。这种编程风格在调用函数或查找属性或键之前显式测试前提条件。与 EAFP 风格相反，这种风格的特点是代码中有很多 if 语句。在多线程环境中，LBYL 风格可能会在“检查”和“行事”的空当引入条件竞争。例如，对 if key in mapping: return mapping[key] 这段代码来说，如果在测试之后，但在查找之前，另一个线程从映射中删除了那个键，那么这段代码就会失败。这个问题可以使用锁或者 EAFP 风格解决。如果选择使用 EAFP 风格，那就要更深入地了解 else 子句，并在 try/except 语句中合理使用。
 
-#### 15.2 with块和上下文管理
+## 15.2 with块和上下文管理
 
 上下文管理器对象存在的目的是管理 with 语句，就像迭代器的存在是为了管理 for 语句 一样。
 
@@ -58,7 +61,7 @@ with 语句的目的是简化 try/finally 模式。这种模式用于保证一�
 > 不易察觉但很重要的一点：执行 with 后面的表达 式得到的结果是上下文管理器对象，不过，把值绑定到目标变量上（as 子句）是在上下文管理器对象上调用 \_\_enter\_\_ 方法的结果。
 > 不管控制流程以哪种方式退出 with 块，都会在上下文管理器对象上调用 \_\_exit\_\_ 方 法，而不是在 \_\_enter\_\_ 方法返回的对象上调用。
 
-#### 15.3 contextlib 标准库中的上下文管理器
+## 15.3 contextlib 标准库中的上下文管理器
 contextlib 模块中有一些类和函数使用范围很广。
 
 - closing
@@ -116,7 +119,7 @@ def looking_glass():
 
 > 在这节的例子中yield 与迭代没有任何关系。在本 节所举的示例中，生成器函数的作用更像是协程：执行到某一点时暂停，让客户代码运 行，直到客户让协程继续做事。
 
-#### 15.4 小结
+## 15.4 小结
 - 讨论了 for、while 和 try 语句的 else 子句。
 - 然后，本章讨论了上下文管理器和 with 语句的作用。
 - 最后，我们分析了标准库中 contextlib 模块里的函数。

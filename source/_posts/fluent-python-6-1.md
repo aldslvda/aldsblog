@@ -13,16 +13,18 @@ toc: true
 comment: true
 ---
 
+> Fluent Python 第六章读书报告-第一部分
 
-## Fluent Python ##
-### Chapter 6. Design Patterns with First-Class Functions ###
-### 第六章. 使用一等函数实现设计模式(1) —— 策略模式
+<!-- more -->
+
+# Chapter 6. Design Patterns with First-Class Functions #
+# 第六章. 使用一等函数实现设计模式(1) —— 策略模式
 这一章中会讲到设计模式的定义和适用场景，以及利用Python的一等函数特性对设计模式的实现。
 
 这篇博文中先讨论策略模式。
-#### 策略模式
+## 策略模式
 合理利用作为一等函数的对象可以简化某些设计模式。
-##### 经典的策略模式
+### 经典的策略模式
 《设计模式：可复用面向对象软件的基础》一书是这样概述“策略”模式的：
 
 > 定义一系列算法，把它们一一封装起来，并且使它们可以相互替换。本模式使得算法可以独立于使用它的客户而变化。
@@ -129,7 +131,7 @@ class LargeOrderPromo(Promotion): # 第三个具体策略
 <Order total: 42.00 due: 42.00>
 ```
 
-##### 使用函数实现策略模式
+### 使用函数实现策略模式
 
 上面的经典实现中，每个策略是一个类，而且都只定义了一个方法discount, 此外它们都没有实例属性，因此可以用普通函数替换。下面是使用函数的一种实现。
 [示例6.3](https://github.com/aldslvda/readings/blob/master/Fluent-Python/6.%20Design%20Patterns%20with%20First-Class%20Functions/order6.3.py)
@@ -216,7 +218,7 @@ def large_order_promo(order):
 
 至此，我们使用函数实现了“策略”模式，接下来我们会在此基础上讲如何利用一致的条件选择最佳的策略。
 
-##### 选择最佳策略的简单方法(暴力迭代)
+### 选择最佳策略的简单方法(暴力迭代)
 使用暴力迭代的话，这个最佳策略选择的实现异常简单:
 
 ```python    
@@ -227,7 +229,7 @@ def best_promo(order):
 ```
 这样直接将best\_promo作为参数传入Order类就行。不过这样做的缺陷是:添加新的策略要定义新的函数，并加进promos列表，否则不在best\_promo的选择范围内。
 
-##### 找出模块中的全部策略
+### 找出模块中的全部策略
 既然说到对模块中函数的遍历，就不得不提到模块的内省函数globals(),这样一说我们就知道，模块也是一等对象（。。。。![](https://github.com/aldslvda/blog-images/blob/master/acfun_emoji/11.png?raw=true)
 
 这样我们有了新的best\_promo:    
@@ -252,7 +254,7 @@ def best_promo(order):
 ```
 这个实现的缺陷是，promotions模块中的**所有函数必须是策略函数**，这种实现是强调模块内省的一种用途而不是提供完善的方案。
 
-#### 总结
+## 总结
 使用一等对象实现策略模式的核心思想是:   
   
 >  用"使用普通的函数"的方式代替"编写只有一个方法的类，再去实现另一个类声明的单函数接口"。将普通的函数作为可共享的对象。     

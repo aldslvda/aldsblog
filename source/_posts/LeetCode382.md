@@ -11,6 +11,10 @@ toc: true
 comment: true
 ---
 
+> LeetCode 382 解题报告
+
+<!-- more -->
+
 ## LeetCode382 蓄水池抽样算法
 首先说一下**蓄水池抽样算法**：
 

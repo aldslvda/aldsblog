@@ -11,6 +11,10 @@ toc: true
 comment: true
 ---
 
+> 本文介绍了Python中可能出现的十个安全问题。
+
+<!-- more -->
+
 原文:
 https://hackernoon.com/10-common-security-gotchas-in-python-and-how-to-avoid-them-e19fbe265e03
 

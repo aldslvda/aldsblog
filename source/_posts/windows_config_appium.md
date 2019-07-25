@@ -1,4 +1,4 @@
-title:  Windows 10系统的 Appium-Python-Android 配置和试运行记录
+title:  Windows 10 Appium-Python-Android 环境配置
 date: 2019-07-19 06:31:00
 tags:
 - Android
@@ -11,8 +11,9 @@ toc: true
 comment: true
 ---
 
-# Windows 10系统的 Appium-Python-Android 配置和试运行记录
+> 本文记录了在 Windows 10系统下 Appium-Python-Android 环境配置过程
 
+<!-- more -->
 ## 1. 环境配置
 需要的环境如下： 
 - jdk8

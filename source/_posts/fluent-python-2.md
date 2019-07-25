@@ -12,9 +12,13 @@ toc: true
 comment: true
 ---
 
-## Fluent Python ##
-### Chapter 2. An Array of Sequences ###
-### 序列构成的数组 ###
+
+> Fluent Python 第二章读书报告
+
+<!-- more -->
+
+# Chapter 2. An Array of Sequences #
+# 序列构成的数组 #
 
 * **Python内置序列**：
 	一种分类方式是根据存放数据的方式分类(指针/数值)

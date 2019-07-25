@@ -13,9 +13,11 @@ toc: true
 comment: true
 ---
 
-## Fluent Python 
-### Chapter 14. Iterables, Iterators, and GeneratorsOperator
-### 第十四章: 可迭代对象，迭代器和生成器
+> Fluent Python 第十四章读书报告
+
+<!-- more --> 
+# Chapter 14. Iterables, Iterators, and GeneratorsOperator
+# 第十四章: 可迭代对象，迭代器和生成器
 
 迭代是数据处理的基石。扫面内存中放不下的数据集时， 我们需要找到一种惰性获取数据的方式，即按需每次获取一个数据项。这就是迭代器模式(Iterator Pattern).
 下面会说明Python语言是如何内置迭代器模式的。
@@ -41,7 +43,7 @@ Python3 中， 生成器有广泛的用途， 例如range() 在Python2中返回�
 - 如何使用yeild from 语句合并生成器
 - 为什么生成器和协程看似相同实则差别很大， 不能混淆
 
-#### 14.1 从序列开始
+## 14.1 从序列开始
 
 我们首先实现一个Sentence类， 通过索引从文本提取单词。
 
@@ -68,7 +70,7 @@ import reprlib
 (3) 如果尝试失败，Python 抛出 TypeError 异常，通常会提示“C object is not iterable”（C对象不可迭代），其中 C 是目标对象所属的类。
 任何 Python 序列都可迭代的原因是，它们都实现了 \_\_getitem\_\_ 方法。其实，标准的序列也都实现了 \_\_iter\_\_ 方法
 
-#### 14.2 可迭代对象和迭代器
+## 14.2 可迭代对象和迭代器
 
 上面一小节我们可以看到迭代器的定义：
 > 使用 iter 内置函数可以获取迭代器的对象。如果对象实现了能返回迭代器的\_\_iter\_\_ 方法，那么对象就是可迭代的。  
@@ -104,7 +106,7 @@ while True:
 
 因为迭代器只有\_\_next\_\_ 和\_\_iter\_\_方法，所以迭代器没办法检查遗漏的元素和‘还原’迭代器， 如果想再次迭代， 还是需要传入被迭代的对象。由于Iterator.\_\_init\_\_是返回实例本身，传入迭代器无法还原已经迭代过的元素。
 
-#### 14.3 典型的迭代器
+## 14.3 典型的迭代器
 
 这一节会将迭代器和可迭代对象分离开来，让我们更加清楚迭代器和可迭代对象的关系
 
@@ -145,7 +147,7 @@ class SentenceIterator:
 > 2. 支持对聚合对象的多种遍历(每次调用iter()都新建一个独立的迭代器)
 > 3. 为遍历不同的聚合结构提供统一的接口
 
-#### 14.4 生成器函数
+## 14.4 生成器函数
 
 Python中实现上一节相同功能的方式是使用生成器函数代替额外实现的迭代器。
 
@@ -168,7 +170,7 @@ class Sentence:
 
 > 只要 Python 函数的定义体中有 yield 关键字，该函数就是生成器函数。调用生成器函数时，会返回一个生成器对象。也就是说，生成器函数是生成器工厂。
 
-#### 14.5 生成器的惰性实现
+## 14.5 生成器的惰性实现
 
 re.finditer是re.findall的惰性版本， 返回的不是一个列表而是一个生成器，这样也能节省大量内存。
 
@@ -188,7 +190,7 @@ class Sentence:
 
 使用finditer使得Sentence的元素变得可以惰性获得了。
 
-#### 14.6 生成器表达式
+## 14.6 生成器表达式
 
 下面使用生成器表达式构建生成器, 会使代码更加简洁
 ```python
@@ -204,7 +206,7 @@ class Sentence:
         return (match.group() for match in RE_WORD.finditer(self.text))
 ```
 
-#### 14.7 yeild from 
+## 14.7 yeild from 
 
 > 注: yeild from 是Python3.3中新出现的语法
 
@@ -237,7 +239,7 @@ class Sentence:
 
 可以看出，yield from i 完全代替了内层的 for 循环， 使得代码简化很多。
 
-#### 14.8 深入分析iter()函数
+## 14.8 深入分析iter()函数
 在 Python 中迭代对象 x 时会调用 iter(x), 这是上文中我们反复提到的, 这也是iter()最常见的用法。   
 
 iter 函数还有一个鲜为人知的用法：传入两个参数，使用常规的函数或任何可调用的对象创建迭代器。这样使用时，第一个参数必须是可调用的对象，用于不断调用（没有参数），产出各个值；第二个值是哨符，这是个标记值，当可调用的对象返回这个值时，触发迭代器抛出 StopIteration 异常，而不产出哨符。
@@ -254,7 +256,7 @@ for roll in d6_iter:
     print(roll)
 ```
 
-#### 14.9 生成器当成协程
+## 14.9 生成器当成协程
 
 > Python 2.5 实现了“PEP 342 — Coroutines via Enhanced Generators”（https://www.python.org/dev/peps/pep-0342/ ）。这个提案为生成器对象添加了额外的方法和功能，其中最值得关注的是 .send() 方法， 这个函数让生成器变身为**协程**。
 
@@ -270,5 +272,5 @@ for roll in d6_iter:
 
 基于这几点， 本章不讨论协程![233](https://github.com/aldslvda/blog-images/blob/master/acfun_emoji/11.png?raw=true)
 
-#### 14.9 小结
+## 14.9 小结
 Python 语言对迭代的支持非常深入, Python 已经融合（grok）了迭代器。Python 从语义上集成迭代器模式是个很好的例证，说明设计模式在各种编程语言中使用的方式并不相同。
