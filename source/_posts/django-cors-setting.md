@@ -11,6 +11,8 @@ toc: true
 comment: true
 ---
 
+<!-- more -->
+
 ## 1. 使用django-cors-headers解决
 
 ### 1.1 安装django-cors-headers
