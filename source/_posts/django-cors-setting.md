@@ -11,7 +11,7 @@ toc: true
 comment: true
 ---
 
-##1. 使用django-cors-headers解决
+## 1. 使用django-cors-headers解决
 
 ### 1.1 安装django-cors-headers
 
@@ -19,6 +19,7 @@ comment: true
 
 
 ### 1.2 修改settings.py
+
 ```python
 INSTALLED_APPS = [
     ......
@@ -51,7 +52,7 @@ class EnableCors(MiddlewareMixin):
 
 ## 3. 我遇到的问题
 以前都是直接用1就解决了，没想到今天吃瘪了，懵逼了好一会。。
-上面两种方式都试过了，前端始终报错，于是用```httpie```测试了一下接口
+上面两种方式都试过了，前端始终报错，于是用`httpie`测试了一下接口
 结果如下
 
 ```
@@ -64,4 +65,4 @@ Date: Thu, 15 Aug 2019 08:34:48 GMT
 Location: https://xxxx/
 Server: stgw/1.3.10.9_1.13.5
 ```
-破案了，因为公司运维给配的域名自动会把http请求重定向到https，导致返回头没有```Access-Control-Allow-Origin```字段，也使得跨域的设置失效。
+破案了，因为公司运维给配的域名自动会把http请求重定向到https，导致返回头没有`Access-Control-Allow-Origin`字段，也使得跨域的设置失效。
