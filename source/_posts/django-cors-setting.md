@@ -17,7 +17,8 @@ comment: true
 
 ### 1.1 安装django-cors-headers
 
-```$ pip install django-cors-headers```
+
+`$ pip install django-cors-headers`
 
 
 ### 1.2 修改settings.py
