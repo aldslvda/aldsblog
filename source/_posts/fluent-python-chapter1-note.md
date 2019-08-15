@@ -12,9 +12,11 @@ toc: true
 comment: true
 ---
 
-## Fluent Python ##
-### Chapter 1. The Python Data Model ###
-### Python数据模型 ###
+> Fluent Python 第一章读书笔记
+
+<!-- more --> 
+# Chapter 1. The Python Data Model #
+# Python数据模型 #
 * 特殊方法：magic method/dunder method (double underscores (i.e., \_\_getitem__()))
 * 特殊方法使对象能**实现，支持基本的语言框架并与之交互**,例如：
 	- Iteration 迭代

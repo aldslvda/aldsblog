@@ -13,14 +13,16 @@ toc: true
 comment: true
 ---
 
-## Fluent Python ##
-### Chapter 6. Design Patterns with First-Class Functions ###
-### 第六章. 使用一等函数实现设计模式(2) —— 命令模式
+> Fluent Python 第六章读书报告-第二部分
+
+<!-- more -->
+# Chapter 6. Design Patterns with First-Class Functions #
+# 第六章. 使用一等函数实现设计模式(2) —— 命令模式
 这一章中会讲到设计模式的定义和适用场景，以及利用Python的一等函数特性对设计模式的实现。
 
 这篇博文中讨论命令模式。
 
-#### 命令模式
+## 命令模式
 ![命令模式的UML类图](https://github.com/aldslvda/blog-images/blob/master/fluent-python-6.2.png?raw=true)
 
 上面的UML类图所描述的场景是"菜单驱动的文本编辑器",使用命令模式实现。各个命令可以有不同的接收者（实现操作的对象）。对 PasteCommand 来说，接收者是Document。对 OpenCommand 来说，接收者是应用程序。
@@ -52,13 +54,13 @@ class MacroCommand:
 
 这里采用的方式与“策略”模式所用的类似：把实现单方法接口的类的实例替换成可调用对象。毕竟，每个Python 可调用对象都实现了单方法接口，这个方法就是 __call__。
 
-#### 总结
+## 总结
 
 通过对策略模式和命令模式的实现，我们看到了Python的一等对象特性的使用方式:
 
 >  设计模式或API 要求组件实现单方法接口，而那个方法的名称很宽泛，例如“execute”“run”或“doIt”。在 Python 中，这些模式或 API 通常可以使用一等函数或其他可调用的对象实现，从而减少样板(重复的)代码。
 
-#### 关于Python语言的设计模式读物
+## 关于Python语言的设计模式读物
 在阅读本章之前，我也去找过设计模式相关书籍，基本都是使用Java/C#实现的，Python相关的设计模式书籍确实乏善可陈。   
 Fluent-Python推荐的设计模式读物:    
 

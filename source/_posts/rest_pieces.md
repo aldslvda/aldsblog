@@ -10,10 +10,12 @@ toc: true
 comment: true
 ---
 
+> 本文主要介绍了REST的定义和特性
 
-## RESTful 风格简介
+<!-- more -->
+ 
 
-### 什么是REST   
+# 什么是REST   
 REST, **RE**presentational **S**tate **T**ransfer, 表现层状态转移是一种编程风格。它描述了两个系统(典型的是客户端与服务端)通过网络交互的一系列准则。   
 REST 是一种风格，是指导方针，而不是规定的细则或者标准。所以只是有“最佳实践”, 而没有“规范说明”。最早由Roy Fielding于2000年在他的博士论文"Architectural Styles and the Design of Network-based Software Architectures"中提出。  
 REST是基于**资源**的，下面是REST风格的一部分：
@@ -23,7 +25,7 @@ REST是基于**资源**的，下面是REST风格的一部分：
 > Resources identified by URIs . Multiple URIs may refer to the same resource
 > Resources are separate from their representation
 
-#### representational 表现层   
+ representational 表现层   
 表现层是指资源的表现形式，也就是资源的信息是如何组织的。他能部分代表资源的状态，表现层在客户端与服务端之间交互，典型的形式是XML/JSON
 举个例子，数据库中存有一个人的个人信息，那么:
 
@@ -32,13 +34,13 @@ REST是基于**资源**的，下面是REST风格的一部分：
 - 表现层:
     人名，住址，电话(JSON/XML)
 
-### 为什么使用RESTful API 
+# 为什么使用RESTful API 
 - 设计简洁
 - 遵循标准的HTTP协议
 - 独立于编程语言之外
 - 最重要的是: 服务端与客户端的轻耦合，它让服务端对客户端"不可知"，只要能使用HTTP协议进行交互，不论是浏览器，手机还是其他设备都无所谓。
 
-### RESTful 6个指导性的约束
+# RESTful 6个指导性的约束
 - Uniform Interface 统一的接口
 - Stateless 无状态
 - Cacheable 可缓存
@@ -46,7 +48,7 @@ REST是基于**资源**的，下面是REST风格的一部分：
 - 分层的系统
 - 按需代码
 
-#### Uniform Interface 统一的接口
+ Uniform Interface 统一的接口
 资源的定位: 独立的资源会被HTTP请求定位, 比方说使用 URI. 在概念上，资源是与表现层分离的，客户端请求的得到的数据是资源的表现层而不是资源本身。
 
 通过表现层操作资源: 当客户端拥有了(附加了一些元信息，如HTTP HEADERs的)资源的表现层, 它就有了足够的权限对资源进行修改或者删除。
@@ -55,7 +57,7 @@ REST是基于**资源**的，下面是REST风格的一部分：
 
 HATEOAS(Hypermedia as the Engine of Application State, 超媒体即应用状态引擎):  当客户端游泳一个初始3的URI，REST应用应该可以动态利用服务端提供的链接来访问到所有资源或者进行所有操作。
 
-#### Stateless 无状态
+ Stateless 无状态
 **无状态原则**
 Statelessness：无状态原则是RESTful架构设计中一个非常重要的原则，无状态是相对于有状态而言的。在理解什么是无状态的交互请求之前，首先我们需要了解什么是有状态，并对两者进行比较以加深认识。
 
@@ -82,12 +84,12 @@ Web服务建立在Web应用程序的协议之上，如：HTTP协议。Web服务�
 > **有状态请求**：Server保存了Client的请求状态，Server会通过Client传递的SessionID在Server中的Session作用域找到之前交互的信息，并以此来实现应答。所以Client只能由某一个Server来应答。
 
 
-#### Cacheable 可缓存
+ Cacheable 可缓存
 互联网中的客户端和中间层服务器可以缓存响应。  
 因此响应必须直接或间接定义自身是否可被缓存，以免客户端使用过期的响应数据来发送其它请求。  
 良好的缓存策略可以有效减少客户端-服务器之间的交互，从而进一步提高系统的可伸缩性和性能。  
 
-#### Server-Client 服务端-客户端
+ Server-Client 服务端-客户端
 
 > wiki: [客户端-服务端模型](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)
 
@@ -95,13 +97,13 @@ Web服务建立在Web应用程序的协议之上，如：HTTP协议。Web服务�
 通过分离用户界面和数据存储这两个关注点，提高了用户界面跨平台的可能性，通过简化服务器组件提高了其可伸缩性。  
 这种分离对于Web来说更加重要的意义是，它使得组件能够进行独立修改和扩展，从而能够支持大量组织的网络化需求。   
 
-#### Layered system 分层系统
+ Layered system 分层系统
 
 客户端通常无法判断它是否是直接连接到后端服务器，还是中间服务器。   
 中间服务器可通过启用负载平衡，并通过提供共享高速缓存来提高系统的可扩展性。   
 当然也可以强制执行安全政策。  
 
-#### Code on demand 按需代码（可选）
+ Code on demand 按需代码（可选）
 
 服务端可以通过传递可执行代码临时为客户端扩展或自定义功能。  
 这方面的例子包括可编译的组件如Java applets和客户机端脚本如JavaScript。

@@ -11,6 +11,10 @@ toc: true
 comment: true
 ---
 
+> LeetCode 496 解题报告
+
+<!-- more -->
+
 ## LeetCode 496. Next Greater Element I使用栈(stack)简化时间复杂度
 
 这道题的描述如下：

@@ -11,6 +11,10 @@ categories:
 toc: true
 comment: true
 ---
+> Python 正在爆炸般流行起来，它被用于DevOps, 数据处理，web开发和安全领域。但是在速度方面却没有取得过什么胜利。 为什么Python这么慢呢？
+
+<!-- more -->
+
 
 ## 为什么Python 如此之慢
 
